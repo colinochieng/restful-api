@@ -51,4 +51,7 @@ class TagAndItemSchema(Schema):
     message = fields.Str()
     item = fields.Nested(ItemSchema)
     tag = fields.Nested(TagSchema)
- 
+
+
+class UserRegisterSchema(UserSchema):
+    email = fields.Str(required=True)
